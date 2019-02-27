@@ -12,16 +12,16 @@ const getAllUsers = async (req, res) => {
 };
 // get user income
 const getUserIncome = async (req, res) => {
-//   try {
+   try {
   const payload = req.params;
 
   const promise = await model.getUserIncomes(payload.userid);
   console.log(promise, '<<<<<<promise from user controler');
   res.status(200).json(promise);
-//   }
-//   catch (error) {
-//     console.error('you have no permission');
-//   }
+  }
+  catch (error) {
+    console.error('you have no permission');
+  }
 };
 
 // update user income

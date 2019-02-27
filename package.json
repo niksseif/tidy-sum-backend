@@ -1,12 +1,19 @@
 {
     "name": "tidy-sum",
     "version": "1.0.0",
+   "engines": {
+    "node": "10.11.0",
+    "npm": "6.7.0"
+    },
     "scripts": {
-        "client": "cd client && yarn start",
+      
         "server": "nodemon server.js",
         "dev": "concurrently \"npm run server\" \"npm run client\"",
         "start": "node server.js",
-        "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+        "knex": "knex",  
+        "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run; npm install --production" ,
+        "nodemon" : "nodemon server.js"
+
     },
     "dependencies": {
         "body-parser": "^1.18.3",
