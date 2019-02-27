@@ -8,9 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 brew install postgresql <br>
 brew install node <br>
 # Installing
-git clone https://github.com/niksseif/tidy-sum-backend
+git clone https://github.com/niksseif/tidy-sum-backend <br>
 npm i <br>
-createdb openIdea_dv <br>
+create db tidysum_dv <br>
 knex migrate:latest <br>
 knex seed:run <br> 
 heroku local <br>
