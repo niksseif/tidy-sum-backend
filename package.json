@@ -8,11 +8,8 @@
     "scripts": {
       
         "server": "nodemon server.js",
-        "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "start": "node server.js",
-        "knex": "knex",  
-        "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run; " ,
-        "nodemon" : "nodemon server.js"
+        "start": "node server.js"
+    
 
     },
     "dependencies": {
