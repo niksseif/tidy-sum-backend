@@ -9,6 +9,7 @@ const cors = require('cors');
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors())
 
 //= ===========================LOCAL HOST LINKS
 // GETTING ALL USERS
